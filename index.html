@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <style>
+      input {
+        border-radius: 4px;
+      }
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="fruits">Which fruit do you like?</label>
+      <select name="fruits" id="fruits">
+        <option value="">Select a fruit</option>
+        <option value="strawberry">Strawberry</option>
+        <option value="apple">Apple</option>
+        <option value="orange">Orange</option>
+        <option value="banana">Banana</option>
+        <option value="watermelon">Watermelon</option>
+      </select>
+    </form>
+    <script>
+      function showSelectFruit(event) {
+        if (event.target.value === "") {
+          alert("Please choose a fruit");
+        } else {
+          alert(event.target.value);
+        }
+      }
+
+      let fruitSelect = document.querySelector("#fruits");
+      fruitSelect.addEventListener("change", showSelectFruit);
+    </script>
+  </body>
 </html>
