@@ -15,27 +15,33 @@
   </head>
   <body>
     <form>
-      <label for="fruits">Which fruit do you like?</label>
-      <select name="fruits" id="fruits">
-        <option value="">Select a fruit</option>
-        <option value="strawberry">Strawberry</option>
-        <option value="apple">Apple</option>
-        <option value="orange">Orange</option>
-        <option value="banana">Banana</option>
-        <option value="watermelon">Watermelon</option>
+      <label for="colors">Choose your favorite primary color?</label>
+      <select name="colors" id="colors">
+        <option value="">Choose your favorite primary color</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
       </select>
     </form>
+
     <script>
-      function showSelectFruit(event) {
+      function showSelectColor(event) {
         if (event.target.value === "") {
-          alert("Please choose a fruit");
-        } else {
-          alert(event.target.value);
+          alert("Please choose a color");
+          return;
+        }
+
+        if (event.target.value === "blue") {
+          alert("💙"); // Blue heart emoji
+        } else if (event.target.value === "red") {
+          alert("❤️"); // Red heart emoji
+        } else if (event.target.value === "yellow") {
+          alert("💛"); // Yellow heart emoji
         }
       }
 
-      let fruitSelect = document.querySelector("#fruits");
-      fruitSelect.addEventListener("change", showSelectFruit);
+      let colorSelect = document.querySelector("#colors");
+      colorSelect.addEventListener("change", showSelectColor);
     </script>
   </body>
 </html>
