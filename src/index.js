@@ -1,3 +1,7 @@
+let parisTime = moment.tz("Europe/Paris").format("dddd Do MMMM H:mm");
+let sydneyTime = moment.tz("Australia/Sydney").format("dddd Do MMMM H:mm");
+let tokyoTime = moment.tz("Asia/Tokyo").format("dddd Do MMMM H:mm");
+
 function ShowCityTime(event) {
   const city = event.target.value;
 
@@ -17,7 +21,3 @@ function ShowCityTime(event) {
 
 let citySelect = document.querySelector("#city");
 citySelect.addEventListener("change", ShowCityTime);
-
-let parisTime = moment.tz("Europe/Paris").format("dddd Do MMMM H:mm");
-let sydneyTime = moment.tz("Australia/Sydney").format("dddd Do MMMM H:mm");
-let tokyoTime = moment.tz("Asia/Tokyo").format("dddd Do MMMM H:mm");
